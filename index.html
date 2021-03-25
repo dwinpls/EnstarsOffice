@@ -142,10 +142,6 @@
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$.getJSON('https://cors-anywhere.herokuapp.com/http://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=3&columns=false', function(n, data) {
-			return n.data.row
-		}
-
 		$.getJSON('https://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=3&columns=false', function(data) {
 			var en_data = {};
 			$.each(data.rows, function(key, value){
@@ -161,7 +157,6 @@
 				en_data += '<td>' + value.ch + '</td>';
 				en_data += '<td>' + value.total + '</td>';
 				en_data += '</tr>';
-
 			});
 			$('#table').append(en_data);
 		});
