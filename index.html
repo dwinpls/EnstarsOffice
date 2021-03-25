@@ -4,22 +4,163 @@
 	<title>Ensemble Stars Office Costume</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </head>
-
+<style type="text/css">
+	.btn-outline-ac{color:#FE403C;border-color:#FE403C}
+	.btn-outline-ac:hover{color:#fff;background-color:#FE403C;border-color:#FE403C}
+	.btn-check:focus+.btn-outline-ac, .btn-outline-ac:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-ac,
+	.btn-check:checked+.btn-outline-ac,
+	.btn-outline-ac.active, .btn-outline-ac.dropdown-toggle.show,
+	.btn-outline-ac:active{color:#fff;background-color:#FE403C;border-color:#FE403C;font-weight: bold}
+	.btn-check:active+.btn-outline-ac:focus, .btn-check:checked+.btn-outline-ac:focus,
+	.btn-outline-ac.active:focus, .btn-outline-ac.dropdown-toggle.show:focus,
+	.btn-outline-ac:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-ac.disabled,
+	.btn-outline-ac:disabled{color:#FE403C;background-color:transparent}
+	.btn-outline-pa{color:#F29703;border-color:#F29703}
+	.btn-outline-pa:hover{color:#fff;background-color:#F29703;border-color:#F29703}
+	.btn-check:focus+.btn-outline-pa, .btn-outline-pa:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-pa,
+	.btn-check:checked+.btn-outline-pa,
+	.btn-outline-pa.active, .btn-outline-pa.dropdown-toggle.show,
+	.btn-outline-pa:active{color:#fff;background-color:#F29703;border-color:#F29703;font-weight: bold}
+	.btn-check:active+.btn-outline-pa:focus, .btn-check:checked+.btn-outline-pa:focus,
+	.btn-outline-pa.active:focus, .btn-outline-pa.dropdown-toggle.show:focus,
+	.btn-outline-pa:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-pa.disabled,
+	.btn-outline-pa:disabled{color:#F29703;background-color:transparent}
+	.btn-outline-un{color:#F83A7D;border-color:#F83A7D}
+	.btn-outline-un:hover{color:#fff;background-color:#F83A7D;border-color:#F83A7D}
+	.btn-check:focus+.btn-outline-un, .btn-outline-un:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-un,
+	.btn-check:checked+.btn-outline-un,
+	.btn-outline-un.active, .btn-outline-un.dropdown-toggle.show,
+	.btn-outline-un:active{color:#fff;background-color:#F83A7D;border-color:#F83A7D;font-weight: bold}
+	.btn-check:active+.btn-outline-un:focus, .btn-check:checked+.btn-outline-un:focus,
+	.btn-outline-un.active:focus, .btn-outline-un.dropdown-toggle.show:focus,
+	.btn-outline-un:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-un.disabled,
+	.btn-outline-un:disabled{color:#F83A7D;background-color:transparent}
+	.btn-outline-sm{color:#029FE2;border-color:#029FE2}
+	.btn-outline-sm:hover{color:#fff;background-color:#029FE2;border-color:#029FE2}
+	.btn-check:focus+.btn-outline-sm, .btn-outline-sm:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-sm,
+	.btn-check:checked+.btn-outline-sm,
+	.btn-outline-sm.active, .btn-outline-sm.dropdown-toggle.show,
+	.btn-outline-sm:active{color:#fff;background-color:#029FE2;border-color:#029FE2;font-weight: bold}
+	.btn-check:active+.btn-outline-sm:focus, .btn-check:checked+.btn-outline-sm:focus,
+	.btn-outline-sm.active:focus, .btn-outline-sm.dropdown-toggle.show:focus,
+	.btn-outline-sm:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-sm.disabled,
+	.btn-outline-sm:disabled{color:#029FE2;background-color:transparent}
+	.btn-outline-te{color:#1260EF;border-color:#1260EF}
+	.btn-outline-te:hover{color:#fff;background-color:#1260EF;border-color:#1260EF}
+	.btn-check:focus+.btn-outline-te, .btn-outline-te:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-te,
+	.btn-check:checked+.btn-outline-te,
+	.btn-outline-te.active, .btn-outline-te.dropdown-toggle.show,
+	.btn-outline-te:active{color:#fff;background-color:#1260EF;border-color:#1260EF;font-weight: bold}
+	.btn-check:active+.btn-outline-te:focus, .btn-check:checked+.btn-outline-te:focus,
+	.btn-outline-te.active:focus, .btn-outline-te.dropdown-toggle.show:focus,
+	.btn-outline-te:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-te.disabled,
+	.btn-outline-te:disabled{color:#1260EF;background-color:transparent}
+	.btn-outline-ch{color:#89D20B;border-color:#89D20B}
+	.btn-outline-ch:hover{color:#fff;background-color:#89D20B;border-color:#89D20B}
+	.btn-check:focus+.btn-outline-ch, .btn-outline-ch:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-ch,
+	.btn-check:checked+.btn-outline-ch,
+	.btn-outline-ch.active, .btn-outline-ch.dropdown-toggle.show,
+	.btn-outline-ch:active{color:#fff;background-color:#89D20B;border-color:#89D20B;font-weight: bold}
+	.btn-check:active+.btn-outline-ch:focus, .btn-check:checked+.btn-outline-ch:focus,
+	.btn-outline-ch.active:focus, .btn-outline-ch.dropdown-toggle.show:focus,
+	.btn-outline-ch:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-ch.disabled,
+	.btn-outline-ch:disabled{color:#89D20B;background-color:transparent}
+</style>
 <body>
+<div class="container">
+	https://docs.google.com/spreadsheets/d/1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ
+</div>
+<div class="container">
+	<center><h3> Choose 3 or more attribute: </h3>
+	<form id="search" role="form" onSubmit="return false;">
+		<div class="form-group">
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="ac" autocomplete="off">
+				<label class="btn btn-outline-ac" for="ac">Active</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="pa" autocomplete="off">
+				<label class="btn btn-outline-pa" for="pa">Passion</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="un" autocomplete="off">
+				<label class="btn btn-outline-un" for="un">Unique</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="sm" autocomplete="off">
+				<label class="btn btn-outline-sm" for="sm">Smart</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="te" autocomplete="off">
+				<label class="btn btn-outline-te" for="te">Technique</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="ch" autocomplete="off">
+				<label class="btn btn-outline-ch" for="ch">Charisma</label>
+			</div>
+		</div>
+	</form></center>
+</div>
+<div class="container">
+	<table class="table table-bordered">
+		<thead><tr>
+			<th>Unit</th>
+			<th>Idol</th>
+			<th>Costume</th>
+			<th>Ac</th>
+			<th>Pa</th>
+			<th>Un</th>
+			<th>Sm</th>
+			<th>Te</th>
+			<th>Ch</th>
+			<th>Total</th>
+		</thead></tr>
+		<tbody id="table">
+			
+		</tbody>
+	</table>
+</div>
+<div class="container" id="ex">
 	
-testingggg
-
-http://gsx2json.com/api?id=SPREADSHEET_ID&sheet=SHEET_NUMBER&q=QUERY
-
-https://docs.google.com/spreadsheets/d/1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ
-
-http://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=1&columns=false
-
-
+</div>
 </body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.getJSON('http://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=3&columns=false', function(data) {
+			var en_data = {};
+			$.each(data.rows, function(key, value){
+				en_data += '<tr>';
+				en_data += '<td>' + value.unit + '</td>';
+				en_data += '<td>' + value.idol + '</td>';
+				en_data += '<td>' + value.costume + '</td>';
+				en_data += '<td>' + value.ac + '</td>';
+				en_data += '<td>' + value.pa + '</td>';
+				en_data += '<td>' + value.un + '</td>';
+				en_data += '<td>' + value.sm + '</td>';
+				en_data += '<td>' + value.te + '</td>';
+				en_data += '<td>' + value.ch + '</td>';
+				en_data += '<td>' + value.total + '</td>';
+				en_data += '</tr>';
+
+			});
+			$('#table').append(en_data);
+		});
+	});
+</script>
 </html>
