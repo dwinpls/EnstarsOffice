@@ -142,6 +142,10 @@
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
+		$.getJSON('https://cors-anywhere.herokuapp.com/http://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=3&columns=false', function(n, data) {
+			return n.data.row
+		}
+
 		$.getJSON('http://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=3&columns=false', function(data) {
 			var en_data = {};
 			$.each(data.rows, function(key, value){
