@@ -9,121 +9,409 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </head>
 <style type="text/css">
-	.btn-outline-ac{color:#FE403C;border-color:#FE403C}
-	.btn-outline-ac:hover{color:#fff;background-color:#FE403C;border-color:#FE403C}
-	.btn-check:focus+.btn-outline-ac, .btn-outline-ac:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-check:active+.btn-outline-ac,
-	.btn-check:checked+.btn-outline-ac,
-	.btn-outline-ac.active, .btn-outline-ac.dropdown-toggle.show,
-	.btn-outline-ac:active{color:#fff;background-color:#FE403C;border-color:#FE403C;font-weight: bold}
-	.btn-check:active+.btn-outline-ac:focus, .btn-check:checked+.btn-outline-ac:focus,
-	.btn-outline-ac.active:focus, .btn-outline-ac.dropdown-toggle.show:focus,
-	.btn-outline-ac:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-outline-ac.disabled,
-	.btn-outline-ac:disabled{color:#FE403C;background-color:transparent}
-	.btn-outline-pa{color:#F29703;border-color:#F29703}
-	.btn-outline-pa:hover{color:#fff;background-color:#F29703;border-color:#F29703}
-	.btn-check:focus+.btn-outline-pa, .btn-outline-pa:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-check:active+.btn-outline-pa,
-	.btn-check:checked+.btn-outline-pa,
-	.btn-outline-pa.active, .btn-outline-pa.dropdown-toggle.show,
-	.btn-outline-pa:active{color:#fff;background-color:#F29703;border-color:#F29703;font-weight: bold}
-	.btn-check:active+.btn-outline-pa:focus, .btn-check:checked+.btn-outline-pa:focus,
-	.btn-outline-pa.active:focus, .btn-outline-pa.dropdown-toggle.show:focus,
-	.btn-outline-pa:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-outline-pa.disabled,
-	.btn-outline-pa:disabled{color:#F29703;background-color:transparent}
-	.btn-outline-un{color:#F83A7D;border-color:#F83A7D}
-	.btn-outline-un:hover{color:#fff;background-color:#F83A7D;border-color:#F83A7D}
-	.btn-check:focus+.btn-outline-un, .btn-outline-un:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-check:active+.btn-outline-un,
-	.btn-check:checked+.btn-outline-un,
-	.btn-outline-un.active, .btn-outline-un.dropdown-toggle.show,
-	.btn-outline-un:active{color:#fff;background-color:#F83A7D;border-color:#F83A7D;font-weight: bold}
-	.btn-check:active+.btn-outline-un:focus, .btn-check:checked+.btn-outline-un:focus,
-	.btn-outline-un.active:focus, .btn-outline-un.dropdown-toggle.show:focus,
-	.btn-outline-un:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-outline-un.disabled,
-	.btn-outline-un:disabled{color:#F83A7D;background-color:transparent}
-	.btn-outline-sm{color:#029FE2;border-color:#029FE2}
-	.btn-outline-sm:hover{color:#fff;background-color:#029FE2;border-color:#029FE2}
-	.btn-check:focus+.btn-outline-sm, .btn-outline-sm:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-check:active+.btn-outline-sm,
-	.btn-check:checked+.btn-outline-sm,
-	.btn-outline-sm.active, .btn-outline-sm.dropdown-toggle.show,
-	.btn-outline-sm:active{color:#fff;background-color:#029FE2;border-color:#029FE2;font-weight: bold}
-	.btn-check:active+.btn-outline-sm:focus, .btn-check:checked+.btn-outline-sm:focus,
-	.btn-outline-sm.active:focus, .btn-outline-sm.dropdown-toggle.show:focus,
-	.btn-outline-sm:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-outline-sm.disabled,
-	.btn-outline-sm:disabled{color:#029FE2;background-color:transparent}
-	.btn-outline-te{color:#1260EF;border-color:#1260EF}
-	.btn-outline-te:hover{color:#fff;background-color:#1260EF;border-color:#1260EF}
-	.btn-check:focus+.btn-outline-te, .btn-outline-te:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-check:active+.btn-outline-te,
-	.btn-check:checked+.btn-outline-te,
-	.btn-outline-te.active, .btn-outline-te.dropdown-toggle.show,
-	.btn-outline-te:active{color:#fff;background-color:#1260EF;border-color:#1260EF;font-weight: bold}
-	.btn-check:active+.btn-outline-te:focus, .btn-check:checked+.btn-outline-te:focus,
-	.btn-outline-te.active:focus, .btn-outline-te.dropdown-toggle.show:focus,
-	.btn-outline-te:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-outline-te.disabled,
-	.btn-outline-te:disabled{color:#1260EF;background-color:transparent}
-	.btn-outline-ch{color:#89D20B;border-color:#89D20B}
-	.btn-outline-ch:hover{color:#fff;background-color:#89D20B;border-color:#89D20B}
-	.btn-check:focus+.btn-outline-ch, .btn-outline-ch:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-check:active+.btn-outline-ch,
-	.btn-check:checked+.btn-outline-ch,
-	.btn-outline-ch.active, .btn-outline-ch.dropdown-toggle.show,
-	.btn-outline-ch:active{color:#fff;background-color:#89D20B;border-color:#89D20B;font-weight: bold}
-	.btn-check:active+.btn-outline-ch:focus, .btn-check:checked+.btn-outline-ch:focus,
-	.btn-outline-ch.active:focus, .btn-outline-ch.dropdown-toggle.show:focus,
-	.btn-outline-ch:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
-	.btn-outline-ch.disabled,
-	.btn-outline-ch:disabled{color:#89D20B;background-color:transparent}
+	.btn-outline-fin{color:#FFD8A1;border-color:#FFD8A1}
+	.btn-outline-fin:hover{color:#fff;background-color:#FFD8A1;border-color:#FFD8A1}
+	.btn-check:focus+.btn-outline-fin, .btn-outline-fin:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-fin,
+	.btn-check:checked+.btn-outline-fin,
+	.btn-outline-fin.active, .btn-outline-fin.dropdown-toggle.show,
+	.btn-outline-fin:active{color:#fff;background-color:#FFD8A1;border-color:#FFD8A1;font-weight: bold}
+	.btn-check:active+.btn-outline-fin:focus, .btn-check:checked+.btn-outline-fin:focus,
+	.btn-outline-fin.active:focus, .btn-outline-fin.dropdown-toggle.show:focus,
+	.btn-outline-fin:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-fin.disabled,
+	.btn-outline-fin:disabled{color:#FFD8A1;background-color:transparent}
+
+	.btn-outline-trk{color:#FF8B0B;border-color:#FF8B0B}
+	.btn-outline-trk:hover{color:#fff;background-color:#FF8B0B;border-color:#FF8B0B}
+	.btn-check:focus+.btn-outline-trk, .btn-outline-trk:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-trk,
+	.btn-check:checked+.btn-outline-trk,
+	.btn-outline-trk.active, .btn-outline-trk.dropdown-toggle.show,
+	.btn-outline-trk:active{color:#fff;background-color:#FF8B0B;border-color:#FF8B0B;font-weight: bold}
+	.btn-check:active+.btn-outline-trk:focus, .btn-check:checked+.btn-outline-trk:focus,
+	.btn-outline-trk.active:focus, .btn-outline-trk.dropdown-toggle.show:focus,
+	.btn-outline-trk:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-trk.disabled,
+	.btn-outline-trk:disabled{color:#FF8B0B;background-color:transparent}
+
+	.btn-outline-ryu{color:#E60033;border-color:#E60033}
+	.btn-outline-ryu:hover{color:#fff;background-color:#E60033;border-color:#E60033}
+	.btn-check:focus+.btn-outline-ryu, .btn-outline-ryu:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-ryu,
+	.btn-check:checked+.btn-outline-ryu,
+	.btn-outline-ryu.active, .btn-outline-ryu.dropdown-toggle.show,
+	.btn-outline-ryu:active{color:#fff;background-color:#E60033;border-color:#E60033;font-weight: bold}
+	.btn-check:active+.btn-outline-ryu:focus, .btn-check:checked+.btn-outline-ryu:focus,
+	.btn-outline-ryu.active:focus, .btn-outline-ryu.dropdown-toggle.show:focus,
+	.btn-outline-ryu:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-ryu.disabled,
+	.btn-outline-ryu:disabled{color:#E60033;background-color:transparent}
+
+	.btn-outline-alk{color:#2BB7CA;border-color:#2BB7CA}
+	.btn-outline-alk:hover{color:#fff;background-color:#2BB7CA;border-color:#2BB7CA}
+	.btn-check:focus+.btn-outline-alk, .btn-outline-alk:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-alk,
+	.btn-check:checked+.btn-outline-alk,
+	.btn-outline-alk.active, .btn-outline-alk.dropdown-toggle.show,
+	.btn-outline-alk:active{color:#fff;background-color:#2BB7CA;border-color:#2BB7CA;font-weight: bold}
+	.btn-check:active+.btn-outline-alk:focus, .btn-check:checked+.btn-outline-alk:focus,
+	.btn-outline-alk.active:focus, .btn-outline-alk.dropdown-toggle.show:focus,
+	.btn-outline-alk:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-alk.disabled,
+	.btn-outline-alk:disabled{color:#2BB7CA;background-color:transparent}
+
+	.btn-outline-edn{color:#5F5B5D;border-color:#5F5B5D}
+	.btn-outline-edn:hover{color:#fff;background-color:#5F5B5D;border-color:#5F5B5D}
+	.btn-check:focus+.btn-outline-edn, .btn-outline-edn:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-edn,
+	.btn-check:checked+.btn-outline-edn,
+	.btn-outline-edn.active, .btn-outline-edn.dropdown-toggle.show,
+	.btn-outline-edn:active{color:#fff;background-color:#5F5B5D;border-color:#5F5B5D;font-weight: bold}
+	.btn-check:active+.btn-outline-edn:focus, .btn-check:checked+.btn-outline-edn:focus,
+	.btn-outline-edn.active:focus, .btn-outline-edn.dropdown-toggle.show:focus,
+	.btn-outline-edn:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-edn.disabled,
+	.btn-outline-edn:disabled{color:#5F5B5D;background-color:transparent}
+
+	.btn-outline-val{color:#8C2246;border-color:#8C2246}
+	.btn-outline-val:hover{color:#fff;background-color:#8C2246;border-color:#8C2246}
+	.btn-check:focus+.btn-outline-val, .btn-outline-val:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-val,
+	.btn-check:checked+.btn-outline-val,
+	.btn-outline-val.active, .btn-outline-val.dropdown-toggle.show,
+	.btn-outline-val:active{color:#fff;background-color:#8C2246;border-color:#8C2246;font-weight: bold}
+	.btn-check:active+.btn-outline-val:focus, .btn-check:checked+.btn-outline-val:focus,
+	.btn-outline-val.active:focus, .btn-outline-val.dropdown-toggle.show:focus,
+	.btn-outline-val:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-val.disabled,
+	.btn-outline-val:disabled{color:#8C2246;background-color:transparent}
+
+	.btn-outline-2wi{color:#FF3B9A;border-color:#FF3B9A}
+	.btn-outline-2wi:hover{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A}
+	.btn-check:focus+.btn-outline-2wi, .btn-outline-2wi:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-2wi,
+	.btn-check:checked+.btn-outline-2wi,
+	.btn-outline-2wi.active, .btn-outline-2wi.dropdown-toggle.show,
+	.btn-outline-2wi:active{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A;font-weight: bold}
+	.btn-check:active+.btn-outline-2wi:focus, .btn-check:checked+.btn-outline-2wi:focus,
+	.btn-outline-2wi.active:focus, .btn-outline-2wi.dropdown-toggle.show:focus,
+	.btn-outline-2wi:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-2wi.disabled,
+	.btn-outline-2wi:disabled{color:#FF3B9A;background-color:transparent}
+
+	.btn-outline-cra{color:#FFD400;border-color:#FFD400}
+	.btn-outline-cra:hover{color:#fff;background-color:#FFD400;border-color:#FFD400}
+	.btn-check:focus+.btn-outline-cra, .btn-outline-cra:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-cra,
+	.btn-check:checked+.btn-outline-cra,
+	.btn-outline-cra.active, .btn-outline-cra.dropdown-toggle.show,
+	.btn-outline-cra:active{color:#fff;background-color:#FFD400;border-color:#FFD400;font-weight: bold}
+	.btn-check:active+.btn-outline-cra:focus, .btn-check:checked+.btn-outline-cra:focus,
+	.btn-outline-cra.active:focus, .btn-outline-cra.dropdown-toggle.show:focus,
+	.btn-outline-cra:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-cra.disabled,
+	.btn-outline-cra:disabled{color:#FFD400;background-color:transparent}
+
+	.btn-outline-und{color:#64368F;border-color:#64368F}
+	.btn-outline-und:hover{color:#fff;background-color:#64368F;border-color:#64368F}
+	.btn-check:focus+.btn-outline-und, .btn-outline-und:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-und,
+	.btn-check:checked+.btn-outline-und,
+	.btn-outline-und.active, .btn-outline-und.dropdown-toggle.show,
+	.btn-outline-und:active{color:#fff;background-color:#64368F;border-color:#64368F;font-weight: bold}
+	.btn-check:active+.btn-outline-und:focus, .btn-check:checked+.btn-outline-und:focus,
+	.btn-outline-und.active:focus, .btn-outline-und.dropdown-toggle.show:focus,
+	.btn-outline-und:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-und.disabled,
+	.btn-outline-und:disabled{color:#64368F;background-color:transparent}
+
+	.btn-outline-rab{color:#68BFF4;border-color:#68BFF4}
+	.btn-outline-rab:hover{color:#fff;background-color:#68BFF4;border-color:#68BFF4}
+	.btn-check:focus+.btn-outline-rab, .btn-outline-rab:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-rab,
+	.btn-check:checked+.btn-outline-rab,
+	.btn-outline-rab.active, .btn-outline-rab.dropdown-toggle.show,
+	.btn-outline-rab:active{color:#fff;background-color:#68BFF4;border-color:#68BFF4;font-weight: bold}
+	.btn-check:active+.btn-outline-rab:focus, .btn-check:checked+.btn-outline-rab:focus,
+	.btn-outline-rab.active:focus, .btn-outline-rab.dropdown-toggle.show:focus,
+	.btn-outline-rab:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-rab.disabled,
+	.btn-outline-rab:disabled{color:#68BFF4;background-color:transparent}
+
+	.btn-outline-aka{color:#962828;border-color:#962828}
+	.btn-outline-aka:hover{color:#fff;background-color:#962828;border-color:#962828}
+	.btn-check:focus+.btn-outline-aka, .btn-outline-aka:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-aka,
+	.btn-check:checked+.btn-outline-aka,
+	.btn-outline-aka.active, .btn-outline-aka.dropdown-toggle.show,
+	.btn-outline-aka:active{color:#fff;background-color:#962828;border-color:#962828;font-weight: bold}
+	.btn-check:active+.btn-outline-aka:focus, .btn-check:checked+.btn-outline-aka:focus,
+	.btn-outline-aka.active:focus, .btn-outline-aka.dropdown-toggle.show:focus,
+	.btn-outline-aka:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-aka.disabled,
+	.btn-outline-aka:disabled{color:#962828;background-color:transparent}
+
+	.btn-outline-kni{color:#305DAA;border-color:#305DAA}
+	.btn-outline-kni:hover{color:#fff;background-color:#305DAA;border-color:#305DAA}
+	.btn-check:focus+.btn-outline-kni, .btn-outline-kni:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-kni,
+	.btn-check:checked+.btn-outline-kni,
+	.btn-outline-kni.active, .btn-outline-kni.dropdown-toggle.show,
+	.btn-outline-kni:active{color:#fff;background-color:#305DAA;border-color:#305DAA;font-weight: bold}
+	.btn-check:active+.btn-outline-kni:focus, .btn-check:checked+.btn-outline-kni:focus,
+	.btn-outline-kni.active:focus, .btn-outline-kni.dropdown-toggle.show:focus,
+	.btn-outline-kni:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-kni.disabled,
+	.btn-outline-kni:disabled{color:#305DAA;background-color:transparent}
+
+	.btn-outline-swi{color:#A3EA34;border-color:#A3EA34}
+	.btn-outline-swi:hover{color:#fff;background-color:#A3EA34;border-color:#A3EA34}
+	.btn-check:focus+.btn-outline-swi, .btn-outline-swi:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-swi,
+	.btn-check:checked+.btn-outline-swi,
+	.btn-outline-swi.active, .btn-outline-swi.dropdown-toggle.show,
+	.btn-outline-swi:active{color:#fff;background-color:#A3EA34;border-color:#A3EA34;font-weight: bold}
+	.btn-check:active+.btn-outline-swi:focus, .btn-check:checked+.btn-outline-swi:focus,
+	.btn-outline-swi.active:focus, .btn-outline-swi.dropdown-toggle.show:focus,
+	.btn-outline-swi:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-swi.disabled,
+	.btn-outline-swi:disabled{color:#A3EA34;background-color:transparent}
+
+	.btn-outline-mam{color:#5A6964;border-color:#5A6964}
+	.btn-outline-mam:hover{color:#fff;background-color:#5A6964;border-color:#5A6964}
+	.btn-check:focus+.btn-outline-mam, .btn-outline-mam:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-mam,
+	.btn-check:checked+.btn-outline-mam,
+	.btn-outline-mam.active, .btn-outline-mam.dropdown-toggle.show,
+	.btn-outline-mam:active{color:#fff;background-color:#5A6964;border-color:#5A6964;font-weight: bold}
+	.btn-check:active+.btn-outline-mam:focus, .btn-check:checked+.btn-outline-mam:focus,
+	.btn-outline-mam.active:focus, .btn-outline-mam.dropdown-toggle.show:focus,
+	.btn-outline-mam:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-mam.disabled,
+	.btn-outline-mam:disabled{color:#5A6964;background-color:transparent}
+
+	.btn-outline-dob{color:#2B4F54;border-color:#2B4F54}
+	.btn-outline-dob:hover{color:#fff;background-color:#2B4F54;border-color:#2B4F54}
+	.btn-check:focus+.btn-outline-dob, .btn-outline-dob:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-dob,
+	.btn-check:checked+.btn-outline-dob,
+	.btn-outline-dob.active, .btn-outline-dob.dropdown-toggle.show,
+	.btn-outline-dob:active{color:#fff;background-color:#2B4F54;border-color:#2B4F54;font-weight: bold}
+	.btn-check:active+.btn-outline-dob:focus, .btn-check:checked+.btn-outline-dob:focus,
+	.btn-outline-dob.active:focus, .btn-outline-dob.dropdown-toggle.show:focus,
+	.btn-outline-dob:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-dob.disabled,
+	.btn-outline-dob:disabled{color:#2B4F54;background-color:transparent}
+
+	.btn-outline-2wi{color:#FF3B9A;border-color:#FF3B9A}
+	.btn-outline-2wi:hover{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A}
+	.btn-check:focus+.btn-outline-2wi, .btn-outline-2wi:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-2wi,
+	.btn-check:checked+.btn-outline-2wi,
+	.btn-outline-2wi.active, .btn-outline-2wi.dropdown-toggle.show,
+	.btn-outline-2wi:active{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A;font-weight: bold}
+	.btn-check:active+.btn-outline-2wi:focus, .btn-check:checked+.btn-outline-2wi:focus,
+	.btn-outline-2wi.active:focus, .btn-outline-2wi.dropdown-toggle.show:focus,
+	.btn-outline-2wi:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-2wi.disabled,
+	.btn-outline-2wi:disabled{color:#FF3B9A;background-color:transparent}
+
+	.btn-outline-2wi{color:#FF3B9A;border-color:#FF3B9A}
+	.btn-outline-2wi:hover{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A}
+	.btn-check:focus+.btn-outline-2wi, .btn-outline-2wi:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-2wi,
+	.btn-check:checked+.btn-outline-2wi,
+	.btn-outline-2wi.active, .btn-outline-2wi.dropdown-toggle.show,
+	.btn-outline-2wi:active{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A;font-weight: bold}
+	.btn-check:active+.btn-outline-2wi:focus, .btn-check:checked+.btn-outline-2wi:focus,
+	.btn-outline-2wi.active:focus, .btn-outline-2wi.dropdown-toggle.show:focus,
+	.btn-outline-2wi:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-2wi.disabled,
+	.btn-outline-2wi:disabled{color:#FF3B9A;background-color:transparent}
+
+	.btn-outline-2wi{color:#FF3B9A;border-color:#FF3B9A}
+	.btn-outline-2wi:hover{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A}
+	.btn-check:focus+.btn-outline-2wi, .btn-outline-2wi:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-check:active+.btn-outline-2wi,
+	.btn-check:checked+.btn-outline-2wi,
+	.btn-outline-2wi.active, .btn-outline-2wi.dropdown-toggle.show,
+	.btn-outline-2wi:active{color:#fff;background-color:#FF3B9A;border-color:#FF3B9A;font-weight: bold}
+	.btn-check:active+.btn-outline-2wi:focus, .btn-check:checked+.btn-outline-2wi:focus,
+	.btn-outline-2wi.active:focus, .btn-outline-2wi.dropdown-toggle.show:focus,
+	.btn-outline-2wi:active:focus{box-shadow:0 0 0 .25rem rgba(13,110,253,.5)}
+	.btn-outline-2wi.disabled,
+	.btn-outline-2wi:disabled{color:#FF3B9A;background-color:transparent}
 </style>
 <body>
-<div class="container">
-	https://docs.google.com/spreadsheets/d/1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ
+<nav class="navbar navbar-dark navbar-fixed-top bg-dark text-white">
+ <div class="container">
+ 	<h3>title</h3>
 </div>
+</nav>
 <div class="container">
-	<center><h3> Choose 3 or more attribute: </h3>
+	<h3 style="margin-top: 20px"> Choose an attribute: </h3>
+	<center>
 	<form id="search" role="form" onSubmit="return false;">
 		<div class="form-group">
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcPaUn" value="AcPaUn" checked>
+			  <label class="form-check-label" for="AcPaUn">Ac+Pa+Un</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcPaSm" value="AcPaSm">
+			  <label class="form-check-label" for="AcPaSm">Ac+Pa+Sm</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcPaTe" value="AcPaTe">
+			  <label class="form-check-label" for="AcPaTe">Ac+Pa+Te</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcPaCh" value="AcPaCh">
+			  <label class="form-check-label" for="AcPaCh">Ac+Pa+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcUnSm" value="AcUnSm">
+			  <label class="form-check-label" for="Ac+Un+Sm">Ac+Un+Sm</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcUnTe" value="AcUnTe">
+			  <label class="form-check-label" for="AcUnTe">Ac+Un+Te</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcUnCh" value="AcUnCh">
+			  <label class="form-check-label" for="AcUnCh">Ac+Un+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcSmTe" value="AcSmTe">
+			  <label class="form-check-label" for="AcSmTe">Ac+Sm+Te</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcSmCh" value="AcSmCh">
+			  <label class="form-check-label" for="AcSmCh">Ac+Sm+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="AcTeCh" value="AcTeCh">
+			  <label class="form-check-label" for="AcTeCh">Ac+Te+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="PaUnSm" value="PaUnSm">
+			  <label class="form-check-label" for="PaUnSm">Pa+Un+Sm</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="PaUnTe" value="PaUnTe">
+			  <label class="form-check-label" for="PaUnTe">Pa+Un+Te</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="PaUnCh" value="PaUnCh">
+			  <label class="form-check-label" for="PaUnCh">Pa+Un+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="PaSmTe" value="PaSmTe">
+			  <label class="form-check-label" for="inlineRadio3">Pa+Sm+Te</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="PaSmCh" value="PaSmCh">
+			  <label class="form-check-label" for="inlineRadio3">Pa+Sm+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="PaTeCh" value="PaTeCh">
+			  <label class="form-check-label" for="inlineRadio3">Pa+Te+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="UnSmTe" value="UnSmTe">
+			  <label class="form-check-label" for="inlineRadio3">Un+Sm+Te</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="UnSmCh" value="UnSmCh">
+			  <label class="form-check-label" for="inlineRadio3">Un+Sm+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="UnTeCh" value="UnTeCh">
+			  <label class="form-check-label" for="inlineRadio3">Un+Te+Ch</label>
+			</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="attr" id="SmTeCh" value="SmTeCh">
+			  <label class="form-check-label" for="inlineRadio3">Sm+Te+Ch</label>
+			</div>
+		</center>
+		<h3> Choose an unit: </h3>
+		<div class="form-group" style="text-align: left">
 			<div class="form-check-inline">
-				<input type="checkbox" class="btn-check" id="ac" autocomplete="off">
-				<label class="btn btn-outline-ac" for="ac">Active</label>
+				<input type="checkbox" class="btn-check" id="fin" autocomplete="off">
+				<label class="btn btn-outline-fin" for="fin">fine</label>
 			</div>
 			<div class="form-check-inline">
-				<input type="checkbox" class="btn-check" id="pa" autocomplete="off">
-				<label class="btn btn-outline-pa" for="pa">Passion</label>
+				<input type="checkbox" class="btn-check" id="trk" autocomplete="off">
+				<label class="btn btn-outline-trk" for="trk">Trickstar</label>
 			</div>
 			<div class="form-check-inline">
-				<input type="checkbox" class="btn-check" id="un" autocomplete="off">
-				<label class="btn btn-outline-un" for="un">Unique</label>
+				<input type="checkbox" class="btn-check" id="ryu" autocomplete="off">
+				<label class="btn btn-outline-ryu" for="ryu">Ryusetai</label>
 			</div>
 			<div class="form-check-inline">
-				<input type="checkbox" class="btn-check" id="sm" autocomplete="off">
-				<label class="btn btn-outline-sm" for="sm">Smart</label>
+				<input type="checkbox" class="btn-check" id="alk" autocomplete="off">
+				<label class="btn btn-outline-alk" for="alk">Alkaloid</label>
 			</div>
 			<div class="form-check-inline">
-				<input type="checkbox" class="btn-check" id="te" autocomplete="off">
-				<label class="btn btn-outline-te" for="te">Technique</label>
+				<input type="checkbox" class="btn-check" id="edn" autocomplete="off">
+				<label class="btn btn-outline-edn" for="edn">Eden</label>
 			</div>
 			<div class="form-check-inline">
-				<input type="checkbox" class="btn-check" id="ch" autocomplete="off">
-				<label class="btn btn-outline-ch" for="ch">Charisma</label>
+				<input type="checkbox" class="btn-check" id="val" autocomplete="off">
+				<label class="btn btn-outline-val" for="val">Valkyrie</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="2wi" autocomplete="off">
+				<label class="btn btn-outline-2wi" for="2wi">2wink</label>
+			</div>
+			<p>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="cra" autocomplete="off">
+				<label class="btn btn-outline-cra" for="cra">Crazy:B</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="und" autocomplete="off">
+				<label class="btn btn-outline-und" for="und">Undead</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="rab" autocomplete="off">
+				<label class="btn btn-outline-rab" for="rab">Ra*bits</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="aka" autocomplete="off">
+				<label class="btn btn-outline-aka" for="aka">Akatsuki</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="kni" autocomplete="off">
+				<label class="btn btn-outline-kni" for="kni">Knights</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="swi" autocomplete="off">
+				<label class="btn btn-outline-swi" for="swi">Switch</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="mam" autocomplete="off">
+				<label class="btn btn-outline-mam" for="mam">MaM</label>
+			</div>
+			<div class="form-check-inline">
+				<input type="checkbox" class="btn-check" id="dob" autocomplete="off">
+				<label class="btn btn-outline-dob" for="dob">Double Face</label>
+			</div>
+
+
+			<input class="btn btn-dark" style="text-align: right" type="submit" value="Submit">
 			</div>
 		</div>
-	</form></center>
+	</form>
 </div>
-<div class="container">
-	<table class="table table-bordered">
+<div class="container" style="margin-top: 20px">
+	<table class="table table-bordered" data-detail-view="true">
 		<thead><tr>
 			<th>Unit</th>
 			<th>Idol</th>
 			<th>Costume</th>
-			<th>Ac</th>
+			<th data-field="Ac">Ac</th>
 			<th>Pa</th>
 			<th>Un</th>
 			<th>Sm</th>
@@ -132,17 +420,20 @@
 			<th>Total</th>
 		</thead></tr>
 		<tbody id="table">
-			
 		</tbody>
 	</table>
 </div>
-<div class="container" id="ex">
-	
+<div class="container">
+	Data on this table: https://docs.google.com/spreadsheets/d/1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ
 </div>
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$.getJSON('https://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=3&columns=false', function(data) {
+	    $('input:checkbox').click(function() {
+	        $('input:checkbox').not(this).prop('checked', false);
+	    });
+
+		$.getJSON("https://gsx2json.com/api?id=1dRat1GwlLqyIOfzu1kmuC5E6sgBiBUl481IHSWglBbQ&sheet=2&idol=madara", function(data) {
 			var en_data = {};
 			$.each(data.rows, function(key, value){
 				en_data += '<tr>';
@@ -160,6 +451,16 @@
 			});
 			$('#table').append(en_data);
 		});
+	$("input[type=checkbox]").on("click", function () {
+    	var count = $("input[type=checkbox]:checked").length;
+    	if (count < 3) {
+      		$("input[type=checkbox]").removeAttr("disabled");
+      	}
+      	else {
+      		$("input[type=checkbox]").prop("disabled","disabled");
+      		$("input[type=checkbox]:checked").removeAttr("disabled");
+      	}
+});
 	});
 </script>
 </html>
